@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Narrow Jumbotron Template for Bootstrap</title>
+ <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+ <link href="./css/cover.css" rel="stylesheet"/>
+  </head>
+
+<body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+        <div class="header">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Masung.NET</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="./main.html">Home</a></li>
+                  <li><a href="./profile.html">Profile</a></li>
+                  <li><a href="/skill">Skill</a></li>
+                  <li><a href="/portfolio">Portfolio</a></li>
+                  <li><a href="./boardlist">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="cover-container">
+              
+   <table border="0">
+      <table border="0">
+            <form id="skillform" action="/skilllist" method="post">
+            <input type="hidden" name="write_skill"> <br>
+            스킬 : <input type="text" name="name" placeholder="스킬명을 입력하세요"> <br><br>
+            내용 : <input type="text" name="functions" style="height:80px" placeholder="내용을 입력하세요"> <br><br>
+            <input type="submit" value="등록">
+            <input type="button" onclick="javascript:history.go(-1)" value="뒤로가기">
+         </form>
+         </table>
+      <hr>
+         <table border="0">
+            <form id="portfolioform" action="/portfoliolist" method="post">
+            <input type="hidden" name="write_portfolio"> <br>
+            프로젝트명 : <input type="text" name="pro_name" placeholder="프로젝트명을 입력하세요"> <br><br>
+            담당업무 : <input type="text" name="pro_subject" placeholder="담당업무를 입력하세요"> <br><br>
+            사용 언어 : <input type="text" name="pro_lang" placeholder="사용 언어를 입력하세요"> <br><br>
+            사용 DBMS : <input type="text" name="pro_dbms" placeholder="사용 DBMS를 입력하세요"> <br><br>
+            사용 SW : <input type="text" name="pro_sw" placeholder="사용 SW를 입력하세요"> <br><br>
+             프로젝트 내용 : <input type="text" name="pro_comment" style="height:80px" placeholder="프로젝트 내용을 입력하세요"> <br><br>
+      <input type="submit" value="등록">
+      <input type="button" onclick="javascript:history.go(-1)" value="뒤로가기"></form>
+   </table>
+
+                </div>
+                
+                  
+            </div>
+
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body>
+</html>

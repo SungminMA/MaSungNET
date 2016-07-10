@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Narrow Jumbotron Template for Bootstrap</title>
+ <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+ <link href="./css/cover.css" rel="stylesheet"/>
+ <link href="./css/img_responsive.css" rel="stylesheet"/>
+  </head>
+
+<body>
+
+    <div class="site-wrapper">
+        
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+        <div class="header">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Masung.NET</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="./main.html">Home</a></li>
+                  <li><a href="./profile.html">Profile</a></li>
+                  <li><a href="./skill">Skill</a></li>
+                  <li class="active"><a href="/portfolio">Portfolio</a></li>
+                  <li><a href="./boardlist">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+                 <!--내용시작-->
+                    <div class="row cover-container">
+                      <% for(var element in portfolio) {  %>
+        			       <div class="col-lg-3 img-wrapper">
+        			        	 <img class="img-circle" src="./img/<%= portfolio[element].pro_name %>.jpg" alt="Generic placeholder image" width="140" height="140" class="img-responsive">
+        			         <h2><%= portfolio[element].pro_name %></h2>
+        			         <table class="table">
+        				        <tbody>
+        				          <tr><td>프로젝트명 : <%= portfolio[element].pro_name %></td></tr>
+                                   <tr><td>담당업무 : <%= portfolio[element].pro_subject %></td></tr>
+                                   <tr><td>사용 언어 : <%= portfolio[element].pro_lang %></td></tr>
+                                   <tr><td>사용 DBMS : <%= portfolio[element].pro_dbms %></td></tr>
+                                   <tr><td>사용 SW : <%= portfolio[element].pro_sw %></td></tr>
+                                <tr><td>프로젝트 내용 : <%= portfolio[element].pro_comment %></td></tr>
+        				        </tbody>
+        			      </table>
+        			         <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        			       </div>
+        			       <% } %>
+                    
+                <!--내용 끝-->
+
+    </div>
+    <p class="lead">
+      <a href="./portfolio.html" class="btn btn-lg btn-default">더 알아보기</a>
+    </p>
+    </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body>
+</html>

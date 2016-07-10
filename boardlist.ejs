@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Narrow Jumbotron Template for Bootstrap</title>
+ <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+ <link href="./css/cover.css" rel="stylesheet"/>
+ <link href="./css/img_responsive.css" rel="stylesheet"/>
+  </head>
+
+<body>
+
+    <div class="site-wrapper">
+        
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+        <div class="header">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Masung.NET</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li><a href="./main.html">Home</a></li>
+                  <li><a href="./profile.html">Profile</a></li>
+                  <li><a href="./skill">Skill</a></li>
+                  <li class="active"><a href="/portfolio">Portfolio</a></li>
+                  <li><a href="./boardlist">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+                 <!--내용시작-->
+                    <div class="row cover" >
+                      <div class="col-lg-3">
+                        </div>
+                      <div class="col-lg-5">
+        			         <table class="table">
+        				        <tbody>
+        				          <% for(var element in board) { %>
+                              <tr align="left">
+                                    <td>
+                                       글번호 : <%= board[element]._id %></td>
+                                       <td>글쓴이 : <%= board[element].writer %></td>
+                                    <td>작성시간 : <%= moment(board[element].date ).format(shortDateFormat)%> %></td>
+                                    </tr>
+                                    <tr align="left"><td colspan=3>내용 : <%= board[element].comment %></td></tr>
+                               <% } %>
+        				        </tbody>
+        			      </table>
+        			      </div>
+        			      <div class="col-lg-4">
+                    <form id="mypostform" action="/getboard" method="post">
+                      이름 : <input type="text" name='writer' placeholder="작성자 이름을 입력하세요"> <br><br>
+                       내용 : <input type="text" name="comment" style="height:80px" placeholder="내용을 입력하세요"> <br><br>
+                      <input type="submit" value="등록">
+                      <input type="button" onclick="javascript:history.go(-1)" value="뒤로가기">
+                   </form>
+                   </div>
+                <!--내용 끝-->
+
+    </div>
+    </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body>
+</html>
